@@ -16,7 +16,7 @@ class ArtisanFindCommand extends Command
     {
         $commands = collect($this->getApplication()->all())
             ->keys()
-            ->filter(fn ($key) => $key !== $this->signature)
+            ->filter(fn (string $key) => $key !== $this->signature)
             ->map(fn ($key) => $key)
             ->toArray();
 

@@ -1,5 +1,6 @@
 {
     "name": "devajmeireles/artisan-find",
+    "description": "A useful Laravel package to find Artisan commands by name and execute them in sequence.",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -19,11 +20,17 @@
         "php": "^8.1",
         "laravel/framework": "^10.0|^11.0"
     },
+    "scripts": {
+        "rector": "php ./vendor/bin/rector process --dry-run --config=rector.php"
+    },
     "extra": {
         "laravel": {
             "providers": [
                 "DevAJMeireles\\ArtisanFind\\ArtisanFindServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "rector/rector": "^1.0"
     }
 }
